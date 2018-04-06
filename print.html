@@ -1,0 +1,42 @@
+<html>
+    <head>
+       <title>My web page!</title>
+       <meta name:"viewport" content:"width = device-width ,  intial-scale=1.0" >
+       <!-- the above tag viewport avoids resizing of text and other elements when shifting devices -->
+        <style>
+        @media print{
+            /* media query */
+            .screen-only{
+                display: none;
+            }
+        }
+        @media (min-width: 500px){
+            /* media query used for changing color on changing screen size */
+            body{
+                background-color: yellow;
+            }
+        }
+        @media (max-width:499px){
+            body{
+                background-color: red;
+            }
+        }
+        @media (min-width: 500px){
+            p::before{
+                content : "This is my resume : ";
+            }
+        }
+        @media (max-width: 499px){
+            p::before{
+                content: "CV : ";
+            }
+        }
+        
+        </style>
+    </head>
+    <body>
+        <p>Paragraph one</p>
+        <!-- <p class="screen-only">This won't be printed</p>  -->
+        <!-- we use the sbove class to use CSS so thst it is not printed when the webpage is printed -->
+    </body>
+</html>
